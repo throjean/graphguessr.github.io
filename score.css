@@ -1,0 +1,25 @@
+body {
+  font-family: "Century Normal", Arial, sans-serif;
+}
+
+.desmosWindow{
+   width: 1200px; 
+   height: 700px;
+}
+
+.button {
+  width: 200px; 
+  margin-top: 30px;
+  padding: 15px; /* Ajouter un peu de rembourrage pour améliorer l'apparence */
+  background-color: #0056b3;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Arrondir les bords */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Ajouter une transition de couleur de fond */
+}
+
+.button:hover {
+  background-color: #96B7D9; /* Changer la couleur de fond au survol */
+}

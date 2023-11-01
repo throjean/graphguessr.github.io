@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <title>GraphGuessr-Menu</title>
+    
+    <head>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   
+    </head>
+
+    <body>
+
+        <div class="background-image"></div>
+
+        <div class="content">
+
+            <h1 class="title">Welcome to GraphGuessr !</h1>
+            <!-- <img class="logo" src="image/png/logo-no-background.png"></img> -->
+
+            <h2 class="mode_selection">Select a mode : </h2>
+
+             <div class="button-container">
+
+                <div class="button-with-description" onclick="window.location.href='polynome.html';">
+                  <button class="button">Polynoob</button>
+                  <p class="description">Une minute pour trouver les quatre coefficients d'un polynôme de degré \(3\):<br><br>\(y = ax^3 + bx^2 + cx + d\)<br><br>Les coefficients sont des entiers compris entre \(-5\) et \(5\).</p>
+                </div>
+                <div class="button-with-description" onclick="window.location.href='intermediate.html';">
+                  <button class="button">Intermediate</button>
+                  <p class="description">Trente secondes pour reconnaitre des fonctions classiques :<br><br> \( \exp\), \( \ln\), \( \sin\), \( \tan\), valeur absolue et puissance,<br><br> avec un coefficient devant la fonction et un autre en argument.<br><br> Les coefficients sont des entiers compris entre \(-5\) et \(5\).</p>
+                </div>
+                
+                <div class="button-with-description" onclick="window.location.href='advance.html';">
+                  <button class="button">Advance</button>
+                  <p class="description">Deux minutes pour trouver une expression formée de produits et de composées de trois fonctions parmi les fonctions suivantes:<br><br> \( \exp\), \( \ln\),<br>\( \sin\), \( \tan\), \( \arctan\),<br> \( \frac{1}{x} \).<br><br> Il n'y a pas de coefficients.</p> <!--\(x^{a} \), \( |x| \), -->
+                </div>
+
+                <div class="button-with-description" onclick="window.location.href='hardcore.html';">
+                  <button class="button-hardcore">Hardcore</button>
+                  <p class="description">Are you sure ?</p>
+                </div>
+
+            </div>
+
+        </div>
+    
+    </body>  
+</html>

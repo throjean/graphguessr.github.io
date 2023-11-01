@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+    <title>GraphGuessr-Polynome</title>
+    
+    <head>
+        <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6">        
+        </script>
+        <link rel="stylesheet" type="text/css" href="guess.css">
+
+    </head>
+
+    <body>
+    <center>
+         <div>
+        <center><h4 class="time"><span id="timer" class="text-primary">01:00</span></h4></center>
+        </div>
+
+        <div id="calculator" style="width: 1200px; height: 700px;"></div>
+        <script src="polynome.js"></script> 
+        <button class="button" id="submitButton" onclick="window.location.href='score.html?expression=' + encodeURIComponent(generatedExpression);">
+            Submit
+        </button>
+        <script>
+            const submitButton = document.getElementById('submitButton');
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    submitButton.click();
+                }
+            });
+        </script>
+    </center>
+    </body>
+

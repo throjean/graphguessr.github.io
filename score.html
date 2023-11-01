@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    
+    <title>GraphGuessr-Score</title>
+    
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+        <link rel="stylesheet" type="text/css" href="score.css">
+
+    </head>
+
+    <body>
+    <center>
+        <h1 id="expression"></h1>
+        <script>
+            var urlParams = new URLSearchParams(window.location.search);
+            var expression = urlParams.get('expression');
+            var expressionParagraph = document.getElementById('expression');
+            expressionParagraph.textContent = "\\(" + expression + "\\)";
+        </script>
+        <div class="desmosWindow" id="calculator"></div>
+        <script>
+            var elt = document.getElementById('calculator');
+            var calculator = Desmos.GraphingCalculator(elt, {border: false, zoomButtons: false, settingsMenu: false, keypad: false, expressionsTopbar: false, xAxisMinorSubdivisions: 2, yAxisMinorSubdivisions: 2, expressions: false});
+            calculator.setExpression({
+              id: 'sExpression',
+              latex: expression,
+              lineOpacity: 0.5,
+              lineWidth: 6
+            });
+
+        </script>
+        <button class="button" id="tryAgain" onclick="window.history.back()">Try again</button>
+          <script>
+            const tryAgainButton = document.getElementById('tryAgain');
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    tryAgainButton.click();
+                }
+            });
+        </script>
+        <button class="button" onclick="window.location.href='menu.html';">
+            Menu
+        </button>
+    </center>
+    </body>  
+</html>
